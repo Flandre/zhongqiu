@@ -14,12 +14,6 @@ gulp.task('copy_modules', function () {
     .pipe(gulp.dest('dist/js/'));
 });
 
-gulp.task('copy_lib', function () {
-  // animation
-  gulp.src('lib/animate/*.min.css')
-    .pipe(gulp.dest('dist/css/'));
-});
-
 gulp.task('copy_src', function () {
   // js
   gulp.src('src/js/*.js')
@@ -57,6 +51,6 @@ gulp.task('watch', function () {
 
 gulp.task('server', ['watch', 'webserver']);
 
-gulp.task('copy', ['copy_modules', 'copy_lib', 'copy_src']);
+gulp.task('copy', ['copy_modules', 'copy_src']);
 
 gulp.task('default', ['copy']);
