@@ -22,6 +22,11 @@ gulp.task('copy_src', function () {
   gulp.src('src/css/*.css')
     .pipe(autoprefixer(AUTOPREFIXER_BROWSER))
     .pipe(gulp.dest('dist/css/'));
+  // scss
+  gulp.src('src/css/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer(AUTOPREFIXER_BROWSER))
+    .pipe(gulp.dest('dist/css/'));
   // index
   gulp.src('index.html')
     .pipe(gulp.dest('dist/'));
