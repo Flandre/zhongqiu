@@ -20,6 +20,7 @@
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^2.3.2",
     "gulp-watch": "^4.3.9",
     "gulp-webserver": "^0.9.1",
     "jquery": "^3.1.0"
