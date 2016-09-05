@@ -3,6 +3,7 @@ var del = require('del');
 var autoprefixer = require('gulp-autoprefixer');
 var AUTOPREFIXER_BROWSER = ['last 2 versions'];
 var webserver = require('gulp-webserver');
+var sass = require('gulp-sass');
 
 gulp.task('clean', function () {
   return del(['dist/']);
