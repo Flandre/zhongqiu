@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   border: 0;
+  font-family: "Microsoft YaHei",sans-serif;
 }
 
 .page_1 {
@@ -9,6 +10,7 @@
   background: #000;
   > div {
     position: absolute;
+    display:none;
   }
   .p1_bg {
     width: 100%;
@@ -18,12 +20,24 @@
     animation-name: fadeIn
   }
   .p1_moon {
-    width: 850px;
-    height: 850px;
+    width: 400px;
+    height: 400px;
     background: url("../images/moon.PNG") no-repeat center center;
     left:50%;
-    margin-left: -425px;
-    animation-name: fadeInDown
+    background-size: 100% 100%;
+    margin-left: -200px;
+    animation-name: fadeIn
+  }
+  .p1_benediction{
+    width:100%;
+    text-align: center;
+    top:50%;
+    animation-name: fadeInUp;
+    span{
+      font-size: 40px;
+      color: #fff;
+      text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    }
   }
 }
 
@@ -31,6 +45,7 @@
 .show {
   animation-duration: 1.5s;
   animation-fill-mode: both;
+  display: block !important;
 }
 
 @keyframes fadeIn {
@@ -42,10 +57,10 @@
   }
 }
 
-@keyframes fadeInDown {
+@keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translate3d(0, -30%, 0)
+    transform: translate3d(0, 130%, 0)
   }
   to {
     opacity: 1;
