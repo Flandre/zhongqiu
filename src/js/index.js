@@ -13,4 +13,14 @@ function animation_step1(){
     }, 1600)
   },200);
 }
+
+
+$.firefly({
+  color: '#fff',
+  minPixel: 1,
+  maxPixel: 3,
+  total : 65,
+  on: 'header'
+});
+/* 执行 */
 animation_step1();
