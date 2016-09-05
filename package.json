@@ -1,0 +1,27 @@
+{
+  "name": "zhongqiu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flandre/zhongqiu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flandre/zhongqiu/issues"
+  },
+  "homepage": "https://github.com/Flandre/zhongqiu#readme",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-watch": "^4.3.9",
+    "gulp-webserver": "^0.9.1",
+    "jquery": "^3.1.0"
+  }
+}
