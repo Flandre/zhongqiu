@@ -3,6 +3,12 @@ $('section').css({
   'width': $(window).width() < 540 ? $(window).width() : 540,
   'height': $(window).height()
 });
+
+var hastouch = 'ontouchstart' in window ? true : false,
+  tapstart = hastouch ? 'touchstart' : 'mousedown',
+  tapend = hastouch ? 'touchend' : 'mouseup';
+var page_y;
+
 /* page 1 */
 function animation_step1() {
   $(".p1_moon").addClass("show");
@@ -21,13 +27,23 @@ function animation_step1() {
     setTimeout(function () {
       $(".p1_benediction").addClass("show");
       setTimeout(function () {
-
+        $(".p1_next").addClass("show");
+        $(".page_1")[0].addEventListener(tapstart, function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          page_y = hastouch ? e.targetTouches[0].pageY : e.clientY;
+        });
+        $(".page_1")[0].addEventListener(tapend, function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          if ((hastouch ? e.targetTouches[0].pageY : e.clientY) < page_y) {
+            alert(true)
+          }
+        })
       }, 1600)
     }, 1600)
   }, 200);
 }
-
-
 
 
 /* 执行 */
