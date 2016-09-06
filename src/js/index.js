@@ -79,13 +79,25 @@ function animation_step2() {
       });
     $(".p2_qrcode").addClass("show");
     setTimeout(function () {
-      if ($('.p2_message').width() < $('.message-container').width()) {
-        $('.message-container').animate({
-          marginLeft: $('.p2_message').width() - $('.message-container').width()
-        }, 15000)
-      }
+      runMessage()
     }, 3000)
   }, 1600)
+}
+function runMessage() {
+  if ($('.p2_message').width() < $('.message-container').width()) {
+    $('.message-container').animate({
+      marginLeft: $('.p2_message').width() - $('.message-container').width()
+    }, 15000, 'linear', function () {
+      console.log('callback');
+      $('.p2_message').on('click', function () {
+        console.log('alert');
+        $('.message-container').css('marginLeft', '0');
+        setTimeout(function(){
+          runMessage();
+        },3000)
+      })
+    })
+  }
 }
 
 /* modal */
@@ -114,11 +126,7 @@ $('.p2_modal_submit').on('click', function () {
   }, 1500);
   console.log($('#set_address').serialize());
   /* 恢复动画 */
-  if ($('.p2_message').width() < $('.message-container').width()) {
-    $('.message-container').animate({
-      marginLeft: $('.p2_message').width() - $('.message-container').width()
-    }, 15000)
-  }
+  runMessage()
 });
 /* 执行 */
 animation_step1();
