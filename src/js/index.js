@@ -1,9 +1,9 @@
+/* init page size */
 $('section').css({
   'width': $(window).width(),
   'height': $(window).height()
 });
-
-
+/* page 1 */
 function animation_step1(){
   $(".p1_moon").addClass("show");
   setTimeout(function(){
@@ -15,11 +15,12 @@ function animation_step1(){
 }
 
 
+/* firefly plugin */
 $.firefly({
-  color: '#fff',
+  color: '#ffd',
   minPixel: 3,
-  maxPixel: 10,
-  total : 10,
+  maxPixel: 6,
+  total : 20,
   borderRadius: '50%',
   on: '.page_1'
 });
