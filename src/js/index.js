@@ -17,10 +17,11 @@ function animation_step1(){
 
 $.firefly({
   color: '#fff',
-  minPixel: 1,
-  maxPixel: 3,
-  total : 65,
-  on: 'header'
+  minPixel: 3,
+  maxPixel: 10,
+  total : 10,
+  borderRadius: '50%',
+  on: '.page_1'
 });
 /* 执行 */
 animation_step1();
