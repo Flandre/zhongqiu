@@ -55,6 +55,9 @@ function animation_step1() {
           e.stopPropagation();
           if ((hastouch ? e.changedTouches[0].pageY : e.clientY) < page_y) {
             $(".page_2").addClass("show");
+            setTimeout(function(){
+              animation_step2();
+            },1600)
           }
         })
       }, 1600)
@@ -62,6 +65,9 @@ function animation_step1() {
   }, 200);
 }
 
+function animation_step2(){
+  
+}
 
 /* 执行 */
 animation_step1();

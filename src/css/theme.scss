@@ -10,8 +10,8 @@
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  .misic-container{
-    .music-icon{
+  .misic-container {
+    .music-icon {
       width: 40px;
       height: 40px;
       position: absolute;
@@ -24,7 +24,7 @@
       background-position: 50% 50%;
       border-radius: 50%;
       margin: 8px;
-      &.music-icon-active{
+      &.music-icon-active {
         animation: clockwise-rotate 1s linear infinite;
       }
     }
@@ -34,7 +34,7 @@
   .page_1 {
     position: absolute;
     background: #000;
-    > div,img {
+    > div, img {
       position: absolute;
       display: none;
       user-select: none;
@@ -42,7 +42,7 @@
     .p1_bg {
       width: 100%;
       height: 100%;
-      background: url("../images/bg.jpg") no-repeat;
+      background: url("../images/p1_bg.jpg") no-repeat;
       background-size: 100% 100%;
       animation-name: fadeIn
     }
@@ -54,13 +54,13 @@
     .p1_benediction {
       width: 50%;
       top: 25%;
-      left:20px;
+      left: 20px;
       animation-name: fadeInLeft;
     }
     .p1_change {
       width: 42%;
       top: 10%;
-      right:20px;
+      right: 20px;
       animation-name: fadeInRight;
     }
     .p1_next {
@@ -72,7 +72,7 @@
         display: block;
         width: 40px;
         height: 40px;
-        margin:0 auto;
+        margin: 0 auto;
         background: url("../images/up-arrow.png") no-repeat center center;
         background-size: 100% 100%;
         animation: guide-up 1s linear infinite;
@@ -81,13 +81,33 @@
   }
   .page_2 {
     position: absolute;
-    background: #000;
-    > div {
-      position: absolute;
-      display: none;
-    }
+    background: url("../images/p2_bg.png");
+    background-size: 100% 100%;
     animation-name: fadeInUp;
     display: none;
+    > div {
+      position: absolute;
+      //display: none;
+    }
+    .message {
+      width: 75%;
+      height: auto;
+      top: 10%;
+      left: 25%;
+      font-size: 16px;
+      color: #fff;
+      writing-mode: vertical-lr;
+      > p {
+        line-height: 24px;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        letter-spacing: 10px;
+        &.from {
+          padding-top: 80px;
+          border: 0;
+          letter-spacing: 6px;
+        }
+      }
+    }
   }
 }
 
