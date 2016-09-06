@@ -4,14 +4,17 @@ $('section').css({
   'height': $(window).height()
 });
 /* page 1 */
-function animation_step1(){
+function animation_step1() {
   $(".p1_moon").addClass("show");
-  setTimeout(function(){
+  setTimeout(function () {
     $(".p1_bg").addClass("show");
-    setTimeout(function(){
+    setTimeout(function () {
       $(".p1_benediction").addClass("show")
+      setTimeout(function () {
+
+      }, 1500)
     }, 1600)
-  },200);
+  }, 200);
 }
 
 
@@ -20,7 +23,7 @@ $.firefly({
   color: '#ffd',
   minPixel: 3,
   maxPixel: 6,
-  total : 20,
+  total: 20,
   borderRadius: '50%',
   on: '.page_1'
 });
