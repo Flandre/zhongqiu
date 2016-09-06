@@ -71,7 +71,7 @@ function animation_step2() {
   setTimeout(function () {
     $(".p2_address_button")
       .addClass("show")
-      .on('click', function(){
+      .on('click', function () {
         $('.p2_modal').addClass('show');
         $('.p2_modal_container').addClass('show');
       });
@@ -86,5 +86,30 @@ function animation_step2() {
   }, 1600)
 }
 
+/* modal */
+$('.p2_modal_submit').on('click', function () {
+  $('.p2_modal')
+    .hide()
+    .removeClass('show');
+  $('.p2_modal_container')
+    .hide()
+    .removeClass('show');
+  $('.popup')
+    .addClass('fade-in show')
+    .show();
+  setTimeout(function () {
+    $('.popup').removeClass('fade-in show');
+    setTimeout(function () {
+      $('.popup')
+        .addClass('fade-out show')
+        .hide();
+      setTimeout(function () {
+        $(".p2_address_button")
+          .hide()
+          .removeClass('show');
+      }, 1500)
+    })
+  }, 1500);
+});
 /* 执行 */
 animation_step1();

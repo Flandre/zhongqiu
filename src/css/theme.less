@@ -214,6 +214,28 @@
       }
     }
   }
+  .popup{
+    display: none;
+    width:50%;
+    position: absolute;
+    top:50%;
+    left:25%;
+    font-size:16px;
+    background:#fff;
+    border: 1px solid #aaa;
+    border-radius:10px;
+    box-shadow: 0 0 12px rgba(0,0,0,.6);
+    z-index: 999;
+    p{
+      margin: 8px 15px;
+    }
+    &.fade-in{
+      animation-name: fadeIn;
+    }
+    &.fade-out{
+      animation-name: fadeOut;
+    }
+  }
 }
 
 /* firefly */
@@ -234,6 +256,15 @@
   }
   to {
     opacity: 1
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1
+  }
+  to {
+    opacity: 0
   }
 }
 
