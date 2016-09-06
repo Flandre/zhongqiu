@@ -4,6 +4,22 @@ $('section').css({
   'height': $(window).height()
 });
 
+$('.main').css({
+  'height': $(window).height()
+});
+
+/* sound controller */
+$('.music-icon').on('click', function () {
+  event.stopPropagation();
+  if ($('.music-icon').hasClass('music-icon-active') && !$('#background-audio')[0].paused) {
+    $('.music-icon').toggleClass('music-icon-active');
+    $('#background-audio')[0].pause();
+  } else {
+    $('.music-icon').toggleClass('music-icon-active');
+    $('#background-audio')[0].play();
+  }
+});
+
 var hastouch = 'ontouchstart' in window ? true : false,
   tapstart = hastouch ? 'touchstart' : 'mousedown',
   tapend = hastouch ? 'touchend' : 'mouseup';
@@ -31,13 +47,13 @@ function animation_step1() {
         $(".page_1")[0].addEventListener(tapstart, function (e) {
           e.preventDefault();
           e.stopPropagation();
-          page_y = hastouch ? e.targetTouches[0].pageY : e.clientY;
+          page_y = hastouch ? e.changedTouches[0].pageY : e.clientY;
         });
         $(".page_1")[0].addEventListener(tapend, function (e) {
           e.preventDefault();
           e.stopPropagation();
-          if ((hastouch ? e.targetTouches[0].pageY : e.clientY) < page_y) {
-            alert(true)
+          if ((hastouch ? e.changedTouches[0].pageY : e.clientY) < page_y) {
+            $(".page_2").addClass("show");
           }
         })
       }, 1600)

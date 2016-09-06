@@ -8,6 +8,28 @@
 .main {
   max-width: 540px;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  .misic-container{
+    .music-icon{
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 1999;
+      border: 2px solid #fff;
+      background: url('../images/audio.png') rgba(4, 4, 4, .32);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      border-radius: 50%;
+      margin: 8px;
+      &.music-icon-active{
+        animation: clockwise-rotate 1s linear infinite;
+      }
+    }
+
+  }
 
   .page_1 {
     position: absolute;
@@ -66,11 +88,13 @@
   }
   .page_2 {
     position: absolute;
-    background: #00F;
+    background: #000;
     > div {
       position: absolute;
       display: none;
     }
+    animation-name: fadeInUp;
+    display: none;
   }
 }
 
@@ -98,7 +122,7 @@
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translate3d(0, 130%, 0)
+    transform: translate3d(0, 100%, 0)
   }
   to {
     opacity: 1;
@@ -121,5 +145,28 @@
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     opacity: 0
+  }
+}
+
+@keyframes clockwise-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg)
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg)
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
   }
 }

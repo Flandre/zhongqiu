@@ -34,6 +34,9 @@ gulp.task('copy_src', function () {
   // images
   gulp.src('src/images/*.*')
     .pipe(gulp.dest('dist/images/'));
+  // sound
+  gulp.src('src/sound/*.*')
+    .pipe(gulp.dest('dist/sound/'));
 });
 
 gulp.task('webserver', function () {
