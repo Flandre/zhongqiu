@@ -74,6 +74,8 @@ function animation_step2() {
       .on('click', function () {
         $('.p2_modal').addClass('show');
         $('.p2_modal_container').addClass('show');
+        /* 停止动画 */
+        $('.message-container').stop();
       });
     $(".p2_qrcode").addClass("show");
     setTimeout(function () {
@@ -110,6 +112,13 @@ $('.p2_modal_submit').on('click', function () {
       }, 1500)
     })
   }, 1500);
+  console.log($('#set_address').serialize());
+  /* 恢复动画 */
+  if ($('.p2_message').width() < $('.message-container').width()) {
+    $('.message-container').animate({
+      marginLeft: $('.p2_message').width() - $('.message-container').width()
+    }, 15000)
+  }
 });
 /* 执行 */
 animation_step1();
