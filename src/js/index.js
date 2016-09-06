@@ -42,6 +42,7 @@ function animation_step1() {
     });
     setTimeout(function () {
       $(".p1_benediction").addClass("show");
+      $(".p1_change").addClass("show");
       setTimeout(function () {
         $(".p1_next").addClass("show");
         $(".page_1")[0].addEventListener(tapstart, function (e) {
