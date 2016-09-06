@@ -69,7 +69,12 @@ function animation_step2() {
   $(".p2_message").addClass("show");
   $(".p2_sender").addClass("show");
   setTimeout(function () {
-    $(".p2_address_button").addClass("show");
+    $(".p2_address_button")
+      .addClass("show")
+      .on('click', function(){
+        $('.p2_modal').addClass('show');
+        $('.p2_modal_container').addClass('show');
+      });
     $(".p2_qrcode").addClass("show");
     setTimeout(function () {
       if ($('.p2_message').width() < $('.message-container').width()) {
