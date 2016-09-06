@@ -4,6 +4,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var AUTOPREFIXER_BROWSER = ['last 2 versions'];
 var webserver = require('gulp-webserver');
 var sass = require('gulp-sass');
+var less = require('gulp-less');
 
 gulp.task('clean', function () {
   return del(['dist/']);
@@ -19,14 +20,19 @@ gulp.task('copy_src', function () {
   // js
   gulp.src('src/js/*.js')
     .pipe(gulp.dest('dist/js/'));
-  // css
-  gulp.src('src/css/*.css')
-    .pipe(autoprefixer(AUTOPREFIXER_BROWSER))
-    .pipe(gulp.dest('dist/css/'));
-  // scss
-  gulp.src('src/css/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer(AUTOPREFIXER_BROWSER))
+  // // css
+  // gulp.src('src/css/*.css')
+  //   .pipe(autoprefixer(AUTOPREFIXER_BROWSER))
+  //   .pipe(gulp.dest('dist/css/'));
+  // // scss
+  // gulp.src('src/css/*.scss')
+  //   .pipe(sass().on('error', sass.logError))
+  //   .pipe(autoprefixer(AUTOPREFIXER_BROWSER))
+  //   .pipe(gulp.dest('dist/css/'));
+  gulp.src('src/css/*.less')
+    .pipe(less({
+      plugin:[autoprefixer(AUTOPREFIXER_BROWSER)]
+    }))
     .pipe(gulp.dest('dist/css/'));
   // index
   gulp.src('index.html')

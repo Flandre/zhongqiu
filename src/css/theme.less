@@ -85,7 +85,7 @@
     background-size: 100% 100%;
     animation-name: fadeInUp;
     display: none;
-    > div {
+    > div, a, img {
       position: absolute;
       display: none;
     }
@@ -99,7 +99,7 @@
       writing-mode: vertical-lr;
       overflow: hidden;
       animation-name: fadeIn;
-      .message-container{
+      .message-container {
         width: auto;
         height: auto;
         > p {
@@ -111,7 +111,7 @@
     }
     .p2_sender {
       top: 20%;
-      right:0;
+      right: 0;
       width: 20%;
       height: 40%;
       font-size: 16px;
@@ -123,7 +123,31 @@
         border: 0;
         letter-spacing: 6px;
       }
-
+    }
+    .p2_address_button {
+      width: 80%;
+      height: 40px;
+      line-height: 40px;
+      font-size: 16px;
+      background: #e99b2b;
+      text-decoration: none;
+      color: #fff;
+      letter-spacing: 3px;
+      top: 65%;
+      left: 10%;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 2px 9px rgba(0, 0, 0, 0.3);
+      animation-name: fadeIn;
+      &:active, &:hover {
+        background: #cc8012;
+      }
+    }
+    .p2_qrcode {
+      width: 40%;
+      bottom: 10px;
+      left:10px;
+      animation-name: fadeIn;
     }
   }
 }
