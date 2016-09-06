@@ -6,7 +6,7 @@
 }
 
 .page_1 {
-  position: relative;
+  position: absolute;
   background: #000;
   > div {
     position: absolute;
@@ -46,7 +46,7 @@
   box-shadow: 0 0 10px #fff;
 }
 
-/* animate */
+/* animates */
 .show {
   animation-duration: 1.5s;
   animation-fill-mode: both;

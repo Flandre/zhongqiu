@@ -9,10 +9,10 @@ function animation_step1() {
   setTimeout(function () {
     $(".p1_bg").addClass("show");
     setTimeout(function () {
-      $(".p1_benediction").addClass("show")
+      $(".p1_benediction").addClass("show");
       setTimeout(function () {
 
-      }, 1500)
+      }, 1600)
     }, 1600)
   }, 200);
 }
@@ -27,5 +27,6 @@ $.firefly({
   borderRadius: '50%',
   on: '.page_1'
 });
+
 /* 执行 */
 animation_step1();
