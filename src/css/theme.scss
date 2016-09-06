@@ -81,32 +81,49 @@
   }
   .page_2 {
     position: absolute;
-    background: url("../images/p2_bg.png");
+    background: url("../images/p2_bg.jpg");
     background-size: 100% 100%;
     animation-name: fadeInUp;
     display: none;
     > div {
       position: absolute;
-      //display: none;
+      display: none;
     }
-    .message {
-      width: 75%;
-      height: auto;
+    .p2_message {
+      width: 50%;
+      height: 50%;
       top: 10%;
       left: 25%;
       font-size: 16px;
       color: #fff;
       writing-mode: vertical-lr;
-      > p {
-        line-height: 24px;
-        border-right: 1px solid rgba(255, 255, 255, 0.2);
-        letter-spacing: 10px;
-        &.from {
-          padding-top: 80px;
-          border: 0;
-          letter-spacing: 6px;
+      overflow: hidden;
+      animation-name: fadeIn;
+      .message-container{
+        width: auto;
+        height: auto;
+        > p {
+          line-height: 30px;
+          border-right: 1px solid rgba(255, 255, 255, 0.2);
+          letter-spacing: 9px;
         }
       }
+    }
+    .p2_sender {
+      top: 20%;
+      right:0;
+      width: 20%;
+      height: 40%;
+      font-size: 16px;
+      color: #fff;
+      writing-mode: vertical-lr;
+      animation-name: fadeIn;
+      > p {
+        line-height: 30px;
+        border: 0;
+        letter-spacing: 6px;
+      }
+
     }
   }
 }

@@ -55,9 +55,9 @@ function animation_step1() {
           e.stopPropagation();
           if ((hastouch ? e.changedTouches[0].pageY : e.clientY) < page_y) {
             $(".page_2").addClass("show");
-            setTimeout(function(){
+            setTimeout(function () {
               animation_step2();
-            },1600)
+            }, 1600)
           }
         })
       }, 1600)
@@ -65,8 +65,18 @@ function animation_step1() {
   }, 200);
 }
 
-function animation_step2(){
-  
+function animation_step2() {
+  $(".p2_message").addClass("show");
+  $(".p2_sender").addClass("show");
+  setTimeout(function () {
+    setTimeout(function () {
+      if ($('.p2_message').width() < $('.message-container').width()) {
+        $('.message-container').animate({
+          marginLeft: $('.p2_message').width() - $('.message-container').width()
+        }, 15000)
+      }
+    }, 3000)
+  }, 1600)
 }
 
 /* 执行 */
