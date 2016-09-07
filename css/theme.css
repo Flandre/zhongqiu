@@ -464,8 +464,8 @@
 }
 @-webkit-keyframes clockwise-rotate {
   0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
   }
   25% {
     -webkit-transform: rotate(90deg);
@@ -486,8 +486,8 @@
 }
 @keyframes clockwise-rotate {
   0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
   }
   25% {
     -webkit-transform: rotate(90deg);
