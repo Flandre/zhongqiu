@@ -1,0 +1,336 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+.main {
+  max-width: 540px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  /* 模态框 */
+}
+.main .misic-container .music-icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 1999;
+  border: 2px solid #fff;
+  background: url('../images/audio.png') rgba(4, 4, 4, 0.32);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 50%;
+  margin: 8px;
+}
+.main .misic-container .music-icon.music-icon-active {
+  animation: clockwise-rotate 1s linear infinite;
+}
+.main .page_1 {
+  position: absolute;
+  background: #000;
+}
+.main .page_1 > div,
+.main .page_1 img {
+  position: absolute;
+  display: none;
+  user-select: none;
+}
+.main .page_1 .p1_bg {
+  width: 100%;
+  height: 100%;
+  background: url("../images/p1_bg.jpg") no-repeat;
+  background-size: 100% 100%;
+  animation-name: fadeIn;
+}
+.main .page_1 .p1_firefly_container {
+  width: 100%;
+  height: 100%;
+  animation-name: fadeIn;
+}
+.main .page_1 .p1_benediction {
+  width: 50%;
+  top: 25%;
+  left: 20px;
+  animation-name: fadeInLeft;
+}
+.main .page_1 .p1_change {
+  width: 42%;
+  top: 10%;
+  right: 20px;
+  animation-name: fadeInRight;
+}
+.main .page_1 .p1_next {
+  width: 100%;
+  height: 40px;
+  bottom: 30px;
+  animation-name: fadeIn;
+}
+.main .page_1 .p1_next .p1_next_btn {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  background: url("../images/up-arrow.png") no-repeat center center;
+  background-size: 100% 100%;
+  animation: guide-up 1s linear infinite;
+}
+.main .page_2 {
+  position: absolute;
+  background: url("../images/p2_bg.jpg");
+  background-size: 100% 100%;
+  animation-name: fadeInUp;
+  display: none;
+}
+.main .page_2 > div,
+.main .page_2 a,
+.main .page_2 img {
+  position: absolute;
+  display: none;
+}
+.main .page_2 .p2_message {
+  width: 50%;
+  height: 50%;
+  top: 10%;
+  left: 25%;
+  font-size: 16px;
+  color: #fff;
+  writing-mode: vertical-lr;
+  overflow: hidden;
+  animation-name: fadeIn;
+}
+.main .page_2 .p2_message .message-container {
+  width: auto;
+  height: auto;
+}
+.main .page_2 .p2_message .message-container > p {
+  line-height: 30px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 9px;
+}
+.main .page_2 .p2_sender {
+  top: 20%;
+  right: 0;
+  width: 20%;
+  height: 40%;
+  font-size: 16px;
+  color: #fff;
+  writing-mode: vertical-lr;
+  animation-name: fadeIn;
+}
+.main .page_2 .p2_sender > p {
+  line-height: 30px;
+  border: 0;
+  letter-spacing: 6px;
+}
+.main .page_2 .p2_address_button {
+  width: 80%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  background: #e99b2b;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 3px;
+  top: 65%;
+  left: 10%;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.3);
+  animation-name: fadeIn;
+}
+.main .page_2 .p2_address_button:active,
+.main .page_2 .p2_address_button:hover {
+  background: #cc8012;
+}
+.main .page_2 .p2_qrcode {
+  width: 40%;
+  bottom: 10px;
+  left: 10px;
+  animation-name: fadeIn;
+}
+.main .p2_modal {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9998;
+  animation-name: fadeIn;
+  animation-duration: 500ms;
+}
+.main .p2_modal_container {
+  width: 80%;
+  height: auto;
+  position: absolute;
+  display: none;
+  top: 5%;
+  left: 5%;
+  padding: 5%;
+  border-radius: 10px;
+  background: #fff;
+  z-index: 9999;
+  animation-name: fadeIn;
+  animation-duration: 500ms;
+}
+.main .p2_modal_container form p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.main .p2_modal_container form p em {
+  font-style: normal;
+  color: #d62e29;
+  margin-right: 5px;
+}
+.main .p2_modal_container form input {
+  width: 94%;
+  padding: 0 3%;
+  margin-bottom: 6px;
+  font-size: 16px;
+  line-height: 26px;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+}
+.main .p2_modal_container form .p2_modal_submit {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 10px;
+  font-size: 16px;
+  background: #e99b2b;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 3px;
+  text-align: center;
+  border-radius: 20px;
+}
+.main .p2_modal_container form .p2_modal_submit:active,
+.main .p2_modal_container form .p2_modal_submit:hover {
+  background: #cc8012;
+}
+.main .popup {
+  display: none;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  font-size: 16px;
+  background: #fff;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+.main .popup p {
+  margin: 8px 15px;
+}
+.main .popup.fade-in {
+  animation-name: fadeIn;
+}
+.main .popup.fade-out {
+  animation-name: fadeOut;
+}
+/* firefly */
+.jqueryFireFly {
+  box-shadow: 0 0 10px #fff;
+}
+/* animates */
+.show {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  display: block !important;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes guide-up {
+  0% {
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+}
+@keyframes clockwise-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
