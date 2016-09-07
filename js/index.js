@@ -36,7 +36,7 @@ function animation_step1() {
       color: '#ffd',
       minPixel: 3,
       maxPixel: 6,
-      total: 20,
+      total: 10,
       borderRadius: '50%',
       on: '.p1_firefly_container'
     });
