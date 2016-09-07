@@ -1,10 +1,15 @@
 var gulp = require('gulp');
 var del = require('del');
 var autoprefixer = require('gulp-autoprefixer');
-var AUTOPREFIXER_BROWSER = ['last 50 versions'];
+var AUTOPREFIXER_BROWSER = {
+  browsers: ['last 2 versions'],
+  cascade: false
+};
 var webserver = require('gulp-webserver');
 var sass = require('gulp-sass');
 var less = require('gulp-less');
+var LessAutoprefix = require('less-plugin-autoprefix');
+var autoprefix = new LessAutoprefix({browsers: ['last 2 versions', 'Chrome >= 1'], cascade: false});
 
 gulp.task('clean', function () {
   return del(['dist/']);
@@ -31,7 +36,7 @@ gulp.task('copy_src', function () {
   //   .pipe(gulp.dest('dist/css/'));
   gulp.src('src/css/*.less')
     .pipe(less({
-      plugin:[autoprefixer()]
+      plugins: [autoprefix]
     }))
     .pipe(gulp.dest('dist/css/'));
   // index
