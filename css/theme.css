@@ -324,7 +324,7 @@
   animation-fill-mode: both;
   display: block !important;
 }
-@-webkit-keyframes fadeIn {
+/*@-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
   }
@@ -1189,4 +1189,4 @@
     transform: translate3d(-100px, 200px, 0);
     opacity: 1;
   }
-}
+}*/
