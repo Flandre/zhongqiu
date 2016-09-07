@@ -31,15 +31,15 @@ function animation_step1() {
   setTimeout(function () {
     $(".p1_bg").addClass("show");
     $(".p1_firefly_container").addClass("show");
-    /* firefly plugin */
-    $.firefly({
-      color: '#ffd',
-      minPixel: 3,
-      maxPixel: 6,
-      total: 10,
-      borderRadius: '50%',
-      on: '.p1_firefly_container'
-    });
+    // /* firefly plugin */
+    // $.firefly({
+    //   color: '#ffd',
+    //   minPixel: 3,
+    //   maxPixel: 6,
+    //   total: 20,
+    //   borderRadius: '50%',
+    //   on: '.p1_firefly_container'
+    // });
     setTimeout(function () {
       $(".p1_benediction").addClass("show");
       $(".p1_change").addClass("show");
