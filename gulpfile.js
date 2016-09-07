@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var del = require('del');
 var autoprefixer = require('gulp-autoprefixer');
-var AUTOPREFIXER_BROWSER = ['last 2 versions'];
+var AUTOPREFIXER_BROWSER = ['last 50 versions'];
 var webserver = require('gulp-webserver');
 var sass = require('gulp-sass');
 var less = require('gulp-less');
@@ -31,7 +31,7 @@ gulp.task('copy_src', function () {
   //   .pipe(gulp.dest('dist/css/'));
   gulp.src('src/css/*.less')
     .pipe(less({
-      plugin:[autoprefixer(AUTOPREFIXER_BROWSER)]
+      plugin:[autoprefixer()]
     }))
     .pipe(gulp.dest('dist/css/'));
   // index
