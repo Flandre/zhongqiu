@@ -30,10 +30,10 @@ function animation_step1() {
   $(".p1_moon").addClass("show");
   setTimeout(function () {
     $(".p1_bg").addClass("show");
-    $(".p1_firefly_container").addClass("show");
+    $('.p1_meteors').addClass("show");
     setTimeout(function () {
-      $(".p1_benediction").addClass("show");
-      $(".p1_change").addClass("show");
+      $('.p1_benediction').addClass('show');
+      $('.p1_benediction > img').addClass("show");
       setTimeout(function () {
         $(".p1_next").addClass("show");
         $(".page_1")[0].addEventListener(tapstart, function (e) {
@@ -52,7 +52,7 @@ function animation_step1() {
           }
         })
       }, 1600)
-    }, 1600)
+    }, 1800)
   }, 200);
 }
 
