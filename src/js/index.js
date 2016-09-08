@@ -31,15 +31,6 @@ function animation_step1() {
   setTimeout(function () {
     $(".p1_bg").addClass("show");
     $(".p1_firefly_container").addClass("show");
-    // /* firefly plugin */
-    // $.firefly({
-    //   color: '#ffd',
-    //   minPixel: 3,
-    //   maxPixel: 6,
-    //   total: 20,
-    //   borderRadius: '50%',
-    //   on: '.p1_firefly_container'
-    // });
     setTimeout(function () {
       $(".p1_benediction").addClass("show");
       $(".p1_change").addClass("show");
@@ -68,7 +59,10 @@ function animation_step1() {
 function animation_step2() {
   $(".p2_message").addClass("show");
   $(".p2_sender").addClass("show");
-  $(".p2_head").addClass("show");
+  $(".p2_head")
+    .width($('.page_2').width() * 0.2)
+    .height($('.page_2').width() * 0.2)
+    .addClass("show");
   setTimeout(function () {
     $(".p2_address_button")
       .addClass("show")
