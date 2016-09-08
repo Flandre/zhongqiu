@@ -21,6 +21,7 @@
   border: 2px solid #fff;
   background: url('../images/audio.png') rgba(4, 4, 4, 0.32);
   background-repeat: no-repeat;
+  background-size: 15px 30px;
   background-position: 50% 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -264,7 +265,7 @@
 }
 .mid-autumn .page_2 .p2_qrcode {
   width: 30%;
-  bottom: 10px;
+  bottom: 20px;
   left: 10px;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
