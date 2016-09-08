@@ -4,7 +4,7 @@ $('section').css({
   'height': $(window).height()
 });
 
-$('.main').css({
+$('.mid-autumn').css({
   'height': $(window).height()
 });
 
@@ -68,6 +68,7 @@ function animation_step1() {
 function animation_step2() {
   $(".p2_message").addClass("show");
   $(".p2_sender").addClass("show");
+  $(".p2_head").addClass("show");
   setTimeout(function () {
     $(".p2_address_button")
       .addClass("show")
