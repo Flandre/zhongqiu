@@ -21,15 +21,28 @@
   border: 2px solid #fff;
   background: url('../images/audio.png') rgba(4, 4, 4, 0.32);
   background-repeat: no-repeat;
-  background-size: 15px 30px;
+  background-size: 15px 28px;
   background-position: 50% 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
   margin: 8px;
 }
+.mid-autumn .misic-container .music-icon:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  margin: 19px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 .mid-autumn .misic-container .music-icon.music-icon-active {
   -webkit-animation: clockwise-rotate 1s linear infinite;
   animation: clockwise-rotate 1s linear infinite;
+}
+.mid-autumn .misic-container .music-icon.music-icon-active:before {
+  display: none;
 }
 .mid-autumn .page_1 {
   position: absolute;
