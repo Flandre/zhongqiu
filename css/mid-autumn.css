@@ -4,14 +4,14 @@
   border: 0;
   font-family: "Microsoft YaHei", sans-serif;
 }
-.main {
+.mid-autumn {
   max-width: 540px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
   /* 模态框 */
 }
-.main .misic-container .music-icon {
+.mid-autumn .misic-container .music-icon {
   width: 40px;
   height: 40px;
   position: absolute;
@@ -19,23 +19,23 @@
   top: 10px;
   z-index: 1999;
   border: 2px solid #fff;
-  background: url('../images/audio.png') rgba(4, 4, 4, 0.32);
+  background: url('/images/audio.png') rgba(4, 4, 4, 0.32);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
   margin: 8px;
 }
-.main .misic-container .music-icon.music-icon-active {
+.mid-autumn .misic-container .music-icon.music-icon-active {
   -webkit-animation: clockwise-rotate 1s linear infinite;
   animation: clockwise-rotate 1s linear infinite;
 }
-.main .page_1 {
+.mid-autumn .page_1 {
   position: absolute;
   background: #000;
 }
-.main .page_1 > div,
-.main .page_1 img {
+.mid-autumn .page_1 > div,
+.mid-autumn .page_1 > img {
   position: absolute;
   display: none;
   -webkit-user-select: none;
@@ -43,21 +43,21 @@
   -ms-user-select: none;
   user-select: none;
 }
-.main .page_1 .p1_bg {
+.mid-autumn .page_1 .p1_bg {
   width: 100%;
   height: 100%;
-  background: url("../images/p1_bg.jpg") no-repeat;
+  background: url("/images/p1_bg.jpg") no-repeat;
   background-size: 100% 100%;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
-.main .page_1 .p1_firefly_container {
+.mid-autumn .page_1 .p1_firefly_container {
   width: 100%;
   height: 100%;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
-.main .page_1 .p1_firefly_container .filefly {
+.mid-autumn .page_1 .p1_firefly_container .filefly {
   display: block;
   position: absolute;
   z-index: 9;
@@ -77,76 +77,76 @@
   -webkit-animation-duration: 40s;
   animation-duration: 40s;
 }
-.main .page_1 .p1_firefly_container .filefly_1 {
+.mid-autumn .page_1 .p1_firefly_container .filefly_1 {
   -webkit-animation-name: filefly1;
   animation-name: filefly1;
 }
-.main .page_1 .p1_firefly_container .filefly_2 {
+.mid-autumn .page_1 .p1_firefly_container .filefly_2 {
   -webkit-animation-name: filefly2;
   animation-name: filefly2;
 }
-.main .page_1 .p1_firefly_container .filefly_3 {
+.mid-autumn .page_1 .p1_firefly_container .filefly_3 {
   -webkit-animation-name: filefly3;
   animation-name: filefly3;
 }
-.main .page_1 .p1_firefly_container .filefly_4 {
+.mid-autumn .page_1 .p1_firefly_container .filefly_4 {
   -webkit-animation-name: filefly4;
   animation-name: filefly4;
 }
-.main .page_1 .p1_firefly_container .filefly_5 {
+.mid-autumn .page_1 .p1_firefly_container .filefly_5 {
   -webkit-animation-name: filefly5;
   animation-name: filefly5;
 }
-.main .page_1 .p1_firefly_container .filefly_6 {
+.mid-autumn .page_1 .p1_firefly_container .filefly_6 {
   -webkit-animation-name: filefly6;
   animation-name: filefly6;
 }
-.main .page_1 .p1_benediction {
+.mid-autumn .page_1 .p1_benediction {
   width: 50%;
   top: 25%;
   left: 20px;
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
-.main .page_1 .p1_change {
+.mid-autumn .page_1 .p1_change {
   width: 42%;
   top: 10%;
   right: 20px;
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
 }
-.main .page_1 .p1_next {
+.mid-autumn .page_1 .p1_next {
   width: 100%;
   height: 40px;
   bottom: 30px;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
-.main .page_1 .p1_next .p1_next_btn {
+.mid-autumn .page_1 .p1_next .p1_next_btn {
   display: block;
   width: 40px;
   height: 40px;
   margin: 0 auto;
-  background: url("../images/up-arrow.png") no-repeat center center;
+  background: url("/images/up-arrow.png") no-repeat center center;
   background-size: 100% 100%;
   -webkit-animation: guide-up 1s linear infinite;
   animation: guide-up 1s linear infinite;
 }
-.main .page_2 {
+.mid-autumn .page_2 {
   position: absolute;
-  background: url("../images/p2_bg.jpg");
+  background: url("/images/p2_bg.jpg");
   background-size: 100% 100%;
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
   display: none;
 }
-.main .page_2 > div,
-.main .page_2 a,
-.main .page_2 img {
+.mid-autumn .page_2 > div,
+.mid-autumn .page_2 > a,
+.mid-autumn .page_2 > img {
   position: absolute;
   display: none;
 }
-.main .page_2 .p2_message {
+.mid-autumn .page_2 .p2_message {
   width: 50%;
   height: 50%;
   top: 10%;
@@ -160,16 +160,15 @@
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
-.main .page_2 .p2_message .message-container {
+.mid-autumn .page_2 .p2_message .message-container {
   width: auto;
   height: auto;
 }
-.main .page_2 .p2_message .message-container > p {
+.mid-autumn .page_2 .p2_message .message-container > p {
   line-height: 30px;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
   letter-spacing: 9px;
 }
-.main .page_2 .p2_sender {
+.mid-autumn .page_2 .p2_sender {
   top: 20%;
   right: 0;
   width: 20%;
@@ -182,12 +181,12 @@
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
-.main .page_2 .p2_sender > p {
+.mid-autumn .page_2 .p2_sender > p {
   line-height: 30px;
   border: 0;
   letter-spacing: 6px;
 }
-.main .page_2 .p2_address_button {
+.mid-autumn .page_2 .p2_address_button {
   width: 80%;
   height: 40px;
   line-height: 40px;
@@ -205,19 +204,35 @@
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.3);
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+  z-index: 999;
 }
-.main .page_2 .p2_address_button:active,
-.main .page_2 .p2_address_button:hover {
+.mid-autumn .page_2 .p2_address_button:active,
+.mid-autumn .page_2 .p2_address_button:hover {
   background: #cc8012;
 }
-.main .page_2 .p2_qrcode {
-  width: 40%;
+.mid-autumn .page_2 .p2_head {
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  top: 35%;
+  right: 5%;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  overflow: hidden;
+}
+.mid-autumn .page_2 .p2_head > img {
+  width: 100%;
+  height: auto;
+}
+.mid-autumn .page_2 .p2_qrcode {
+  width: 30%;
   bottom: 10px;
   left: 10px;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
-.main .p2_modal {
+.mid-autumn .p2_modal {
   top: 0;
   left: 0;
   position: absolute;
@@ -231,7 +246,7 @@
   -webkit-animation-duration: 500ms;
   animation-duration: 500ms;
 }
-.main .p2_modal_container {
+.mid-autumn .p2_modal_container {
   width: 80%;
   height: auto;
   position: absolute;
@@ -248,16 +263,21 @@
   -webkit-animation-duration: 500ms;
   animation-duration: 500ms;
 }
-.main .p2_modal_container form p {
+.mid-autumn .p2_modal_container form ul,
+.mid-autumn .p2_modal_container form li {
+  list-style: none;
+}
+.mid-autumn .p2_modal_container form p {
   font-size: 14px;
   margin-bottom: 6px;
 }
-.main .p2_modal_container form p em {
+.mid-autumn .p2_modal_container form p em {
   font-style: normal;
   color: #d62e29;
   margin-right: 5px;
 }
-.main .p2_modal_container form input {
+.mid-autumn .p2_modal_container form input,
+.mid-autumn .p2_modal_container form select {
   width: 94%;
   padding: 0 3%;
   margin-bottom: 6px;
@@ -266,7 +286,18 @@
   border-bottom: 1px solid #ddd;
   outline: none;
 }
-.main .p2_modal_container form .p2_modal_submit {
+.mid-autumn .p2_modal_container form select {
+  width: 100%;
+}
+.mid-autumn .p2_modal_container form .err {
+  width: 94%;
+  padding: 0 3%;
+  font-size: 14px;
+  line-height: 18px;
+  color: #d62e29;
+  display: none;
+}
+.mid-autumn .p2_modal_container form .p2_modal_submit {
   display: block;
   width: 100%;
   height: 40px;
@@ -281,11 +312,11 @@
   -webkit-border-radius: 20px;
   border-radius: 20px;
 }
-.main .p2_modal_container form .p2_modal_submit:active,
-.main .p2_modal_container form .p2_modal_submit:hover {
+.mid-autumn .p2_modal_container form .p2_modal_submit:active,
+.mid-autumn .p2_modal_container form .p2_modal_submit:hover {
   background: #cc8012;
 }
-.main .popup {
+.mid-autumn .popup {
   display: none;
   width: 50%;
   position: absolute;
@@ -300,14 +331,14 @@
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
   z-index: 999;
 }
-.main .popup p {
+.mid-autumn .popup p {
   margin: 8px 15px;
 }
-.main .popup.fade-in {
+.mid-autumn .popup.fade-in {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
-.main .popup.fade-out {
+.mid-autumn .popup.fade-out {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
 }
