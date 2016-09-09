@@ -1,4 +1,11 @@
 /* init page size */
+/* 音乐加载完毕再执行动画 */
+$('#background-audio')[0].addEventListener('canplay', function(){
+  console.log('--加载完毕--')
+  $('.music-icon').addClass('music-icon-active');
+  $('#background-audio')[0].play();
+});
+
 $('section').css({
   'width': $(window).width() < 540 ? $(window).width() : 540,
   'height': $(window).height()

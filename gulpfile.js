@@ -9,7 +9,7 @@ var webserver = require('gulp-webserver');
 var sass = require('gulp-sass');
 var less = require('gulp-less');
 var LessAutoprefix = require('less-plugin-autoprefix');
-var autoprefix = new LessAutoprefix({browsers: ['last 2 versions', 'Chrome >= 1'], cascade: false});
+var autoprefix = new LessAutoprefix({browsers: ['last 2 versions'], cascade: false});
 
 gulp.task('clean', function () {
   return del(['dist/']);
